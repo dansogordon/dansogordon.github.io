@@ -633,7 +633,26 @@
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
 <!-- Your custom scripts -->
-<script src="js/custom.js"></script>
+<script>
+$(window).on('load', function () {
+  var $grid = $('.grid');
+
+  $grid.imagesLoaded(function () {
+    $grid.isotope({
+      itemSelector: '.single-portfolio',
+      layoutMode: 'fitRows'
+    });
+  });
+
+  $('.filters li').on('click', function () {
+    $('.filters li').removeClass('active');
+    $(this).addClass('active');
+
+    var filterValue = $(this).attr('data-filter');
+    $grid.isotope({ filter: filterValue });
+  });
+});
+</script>
 
 <!-- Google Map (optional) -->
 <!--
