@@ -6,6 +6,12 @@ body {
   font-size: 16px;
   font-weight: 300; }
 
+  .project-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;list-style:none;padding:0;margin:0 0 50px}
+.project-filters li{cursor:pointer;font-size:14px;color:#9a9a9a;display:flex;align-items:center;gap:8px;padding:4px 2px;border-bottom:2px solid transparent;transition:color .3s,border-color .3s}
+.project-filters li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c,#888)}
+.project-filters li:hover{color:#fff}
+.project-filters li.active{color:#fff;border-color:var(--c,#fff)}
+
 .p1-gradient-bg, .thumb .overlay-bg {
   background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
