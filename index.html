@@ -1222,13 +1222,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!video || !heading) return;
 
-    video.addEventListener('loadedmetadata', function () {
-        setInterval(function () {
-            const time = video.currentTime;
+    function updateHeading() {
+        const time = video.currentTime;
+        const duration = video.duration;
 
-            heading.style.opacity = (time >= 3 && time < 15) ? '0' : '1';
-        }, 100);
-    });
+        if (time >= 3 && time < duration - 5) {
+            heading.style.opacity = '0';
+        } else {
+            heading.style.opacity = '1';
+        }
+    }
+
+    video.addEventListener('timeupdate', updateHeading);
+    video.addEventListener('loadedmetadata', updateHeading);
 });
 </script>
 
