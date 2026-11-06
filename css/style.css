@@ -387,7 +387,7 @@ a {
       text-transform: uppercase;
       color: #cccccc; }
 
-/*--------- Start Portfolio Area -------------*/
+
 
 
 /* Cinematic Portfolio Hero Video */
@@ -440,6 +440,45 @@ a {
     opacity: 0;
 }
 
+/* Mobile Hero Optimization */
+@media (max-width: 767px) {
+
+    .video-hero {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .video-hero .site-heading {
+        font-size: 42px !important;
+        line-height: 1.1;
+    }
+
+    .video-hero .site-heading strong {
+        font-size: 54px !important;
+    }
+
+    .video-hero .hero-content .col-md-10 > strong {
+        font-size: 13px;
+        line-height: 1.6;
+        display: block;
+        padding: 0 10px;
+    }
+
+    .video-hero .hero-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/*--------- Start Portfolio Area -------------*/
 .portfolio-area .primary-btn {
   color: #fff;
   background-color: #bac964;
