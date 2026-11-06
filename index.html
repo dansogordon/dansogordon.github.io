@@ -48,12 +48,26 @@
 
 
 
-	<section class="site-hero" style="background-image: url(images/Headshot1.jpg);" id="section-home" data-stellar-background-ratio="0.5">
-		<div class="container">
-			<div class="row intro-text align-items-center justify-content-center">
-				<div class="col-md-10 text-center pt-5">
 
-					<h1 class="site-heading site-animate">I'm <strong class="d-block">Dan Gordon</strong></h1>
+
+<section class="site-hero video-hero" id="section-home">
+    <video class="hero-background-video"
+           autoplay
+           muted
+           loop
+           playsinline
+           preload="auto">
+        <source src="images/Motion UIUX.mp4" type="video/mp4">
+    </video>
+    <div class="hero-dark-overlay"></div>
+    <div class="container hero-content">
+        <div class="row intro-text align-items-center justify-content-center">
+
+            <div class="col-md-10 text-center pt-5">
+
+					<h1 class="site-heading site-animate video-heading">
+    I'm <strong class="d-block">Dan Gordon</strong>
+</h1>
 					<strong class="d-block text-white text-uppercase letter-spacing">a UI/UX Designer focused on creating experiences that drive product growth and profitability.</strong><br>
                     #BUILDSOMETHINGBEAUTIFUL
 
@@ -1201,7 +1215,22 @@ $(window).on('load', function () {
     });
   });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.querySelector('.hero-background-video');
+    const heading = document.querySelector('.video-heading');
 
+    if (!video || !heading) return;
+
+    video.addEventListener('loadedmetadata', function () {
+        setInterval(function () {
+            const time = video.currentTime;
+
+            heading.style.opacity = (time >= 3 && time < 15) ? '0' : '1';
+        }, 100);
+    });
+});
+</script>
 
 <!-- Google Map (optional) -->
 <!--
