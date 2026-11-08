@@ -57,11 +57,15 @@
            loop
            playsinline
            preload="auto">
-        <source src="images/Motion UIUX.mp4" type="video/mp4">
+        <source src="images/UIUX Hero Section.mp4" type="video/mp4">
     </video>
+<button class="hero-sound-toggle" id="heroSoundToggle">
+    <i class="fa fa-volume-off"></i>
+    <span>SOUND OFF</span>
+</button>
     <div class="hero-dark-overlay"></div>
     <div class="container hero-content">
-        <div class="row intro-text align-items-center justify-content-center">
+        <div class="row intro-text hero-intro-fade align-items-center justify-content-center">
 
             <div class="col-md-10 text-center pt-5">
 
@@ -69,7 +73,7 @@
     I'm <strong class="d-block">Dan Gordon</strong>
 </h1>
 					<strong class="d-block text-white text-uppercase letter-spacing">a UI/UX Designer focused on creating experiences that drive product growth and profitability.</strong><br>
-                    #BUILDSOMETHINGBEAUTIFUL
+                  
 
 				</div>
 			</div>
@@ -1218,7 +1222,7 @@ $(window).on('load', function () {
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const video = document.querySelector('.hero-background-video');
-    const heading = document.querySelector('.video-heading');
+    const heading = document.querySelector('.intro-text');
 
     if (!video || !heading) return;
 
@@ -1226,7 +1230,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const time = video.currentTime;
         const duration = video.duration;
 
-        if (time >= 3 && time < duration - 5) {
+        if (time >= 3) {
             heading.style.opacity = '0';
         } else {
             heading.style.opacity = '1';
@@ -1235,6 +1239,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     video.addEventListener('timeupdate', updateHeading);
     video.addEventListener('loadedmetadata', updateHeading);
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.querySelector('.hero-background-video');
+    const button = document.getElementById('heroSoundToggle');
+
+    if (!video || !button) return;
+
+    button.addEventListener('click', function () {
+        video.muted = !video.muted;
+
+        if (video.muted) {
+            button.innerHTML = '<i class="fa fa-volume-off"></i><span>SOUND OFF</span>';
+        } else {
+            button.innerHTML = '<i class="fa fa-volume-up"></i><span>SOUND ON</span>';
+        }
+    });
 });
 </script>
 
