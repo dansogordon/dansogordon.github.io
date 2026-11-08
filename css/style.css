@@ -479,11 +479,10 @@ a {
     font-weight: 600;
     cursor: pointer;
 }
-/* Mobile Hero Optimization */
 @media (max-width: 767px) {
-
     .video-hero {
         width: 100%;
+        min-height: 100vh;
         overflow: hidden;
     }
 
@@ -514,8 +513,14 @@ a {
         padding-left: 15px;
         padding-right: 15px;
     }
-}
 
+    .hero-sound-toggle {
+        bottom: 18px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+}
 
 /*--------- Start Portfolio Area -------------*/
 .portfolio-area .primary-btn {
