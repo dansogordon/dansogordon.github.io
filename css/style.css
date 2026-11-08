@@ -520,6 +520,19 @@ a {
         padding: 10px 15px;
         font-size: 11px;
     }
+    
+}
+
+@media (max-width: 767px) {
+    .site-hero,
+    .site-hero .row {
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+    .video-hero .hero-content {
+        height: 100%;
+    }
 }
 
 /*--------- Start Portfolio Area -------------*/
