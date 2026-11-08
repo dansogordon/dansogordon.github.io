@@ -492,48 +492,48 @@ a {
     font-weight: 600;
     cursor: pointer;
 }
+@media screen and (max-width: 767px) {
 
-@media screen and (max-width: 727px) {
-
-    .site-hero.video-hero,
-    .site-hero.video-hero .row {
-        height: 90vh;
-        min-height: 0;
-    }
-
-    .video-hero {
+    .site-hero.video-hero {
+        height: 100svh !important;
+        min-height: 0 !important;
         position: relative;
         overflow: hidden;
     }
 
-.video-hero .hero-background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    transform: translate(-50%, -50%);
-}
+    .site-hero.video-hero .row {
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .video-hero .hero-background-video {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
 
     .video-hero .hero-content {
-        height: 90%;
+        position: relative;
+        height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
         padding: 0 20px;
     }
 
     .video-hero .intro-text {
-        width: 90%;
+        width: 100%;
         height: auto;
         min-height: 0;
         margin: 0;
     }
 
     .video-hero .intro-text > div {
-        width: 90%;
+        width: 100%;
         max-width: 100%;
         padding: 0 !important;
     }
@@ -554,7 +554,7 @@ a {
     .hero-sound-toggle {
         bottom: 18px;
         right: 15px;
-        padding: 10px 10px;
+        padding: 10px 15px;
         font-size: 11px;
     }
 }
