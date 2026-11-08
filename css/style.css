@@ -523,17 +523,6 @@ a {
     
 }
 
-@media (max-width: 767px) {
-    .site-hero,
-    .site-hero .row {
-        height: 100vh;
-        min-height: 100vh;
-    }
-
-    .video-hero .hero-content {
-        height: 100%;
-    }
-}
 
 /*--------- Start Portfolio Area -------------*/
 .portfolio-area .primary-btn {
