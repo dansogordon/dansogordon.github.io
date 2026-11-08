@@ -209,11 +209,14 @@ a {
     font-weight: 200;
     margin-bottom: 20px;
     display: block; }
+
     .site-hero h1 strong {
       font-weight: 800; }
+
     @media (min-width: 768px) {
       .site-hero h1 {
         font-size: 70px; } }
+
   .site-hero h1, .site-hero .lead {
     font-weight: 200;
     color: #fff; }
@@ -251,7 +254,8 @@ a {
 .site-service-item {
   background: #333;
   padding: 30px; }
-  .site-service-item .icon {
+
+.site-service-item .icon {
     display: block;
     margin-bottom: 50px;
     background: #edf0f2;
@@ -261,51 +265,58 @@ a {
     position: relative;
     border-radius: 50%;
     margin: 0 auto 30px auto; }
-    .site-service-item .icon span {
-      font-size: 40px;
-      color: #080b0e;
-      position: absolute;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      left: 50%;
-      top: 50%; }
-  .site-service-item h3 {
+
+.site-service-item .icon span {
+  font-size: 40px;
+  color: #080b0e;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%; }
+
+.site-service-item h3 {
     font-size: 20px;
     font-weight: 200; }
 
 .site-link {
   position: relative; }
-  .site-link i {
+
+.site-link i {
     position: relative;
     top: 2px;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease; }
-  .site-link:hover i {
+
+.site-link:hover i {
     position: relative;
     margin-left: 20px; }
 
 .site-list {
   padding: 0;
   margin: 0; }
-  .site-list li {
+
+.site-list li {
     margin: 0 0 10px 0;
     padding: 0;
     position: relative;
     list-style: none; }
-    .site-list li:before {
-      font-family: 'icomoon';
-      position: absolute;
-      top: .1em;
-      left: 0; }
-    .site-list li.site-check {
-      padding-left: 30px; }
-      .site-list li.site-check:before {
-        color: #bac964;
-        font-size: 16px;
-        content: "\ebd3"; }
+    
+  .site-list li:before {
+    font-family: 'icomoon';
+    position: absolute;
+    top: .1em;
+    left: 0; }
 
+  .site-list li.site-check {
+    padding-left: 30px; }
+
+  .site-list li.site-check:before {
+    color: #bac964;
+    font-size: 16px;
+    content: "\ebd3"; }
 
 
 .btn {
@@ -411,6 +422,8 @@ a {
     z-index: 0;
 }
 
+
+
 .hero-dark-overlay {
     position: absolute;
     inset: 0;
@@ -479,24 +492,23 @@ a {
     font-weight: 600;
     cursor: pointer;
 }
+
 @media screen and (max-width: 767px) {
 
     .site-hero.video-hero,
     .site-hero.video-hero .row {
         height: 100vh;
-        min-height: 100vh;
+        min-height: 0;
     }
 
     .video-hero {
         position: relative;
-        width: 100%;
         overflow: hidden;
     }
 
     .video-hero .hero-background-video {
         position: absolute;
-        top: 0;
-        left: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -504,13 +516,31 @@ a {
         transform: none;
     }
 
-    .video-hero .site-heading {
-        font-size: 42px !important;
-        line-height: 1.1;
+    .video-hero .hero-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
     }
 
+    .video-hero .intro-text {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+    }
+
+    .video-hero .intro-text > div {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+    }
+
+    .video-hero .site-heading,
     .video-hero .site-heading strong {
-        font-size: 54px !important;
+        font-size: 42px !important;
+        line-height: 1.1;
     }
 
     .video-hero .hero-content .col-md-10 > strong {
@@ -520,15 +550,10 @@ a {
         padding: 0 10px;
     }
 
-    .video-hero .hero-content {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
     .hero-sound-toggle {
         bottom: 18px;
         right: 15px;
-        padding: 10px 15px;
+        padding: 10px 10px;
         font-size: 11px;
     }
 }
