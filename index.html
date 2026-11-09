@@ -1259,7 +1259,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+<script>
+const heroVideo = document.querySelector('.hero-background-video');
 
+if (window.matchMedia('(max-width: 767px)').matches) {
+    heroVideo.src = 'images/UIUX Hero Section Mobile.mp4';
+    heroVideo.load();
+    heroVideo.play();
+}
+</script>
 <!-- Google Map (optional) -->
 <!--
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
