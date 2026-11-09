@@ -496,26 +496,25 @@ a {
 @media screen and (max-width: 767px) {
 
     .site-hero.video-hero {
-        height: auto !important;
+        height: 100% !important;
         min-height: 0 !important;
-        aspect-ratio: 16/9;
+       
     }
 
     .site-hero.video-hero .row {
-        height: auto !important;
+        height: 100% !important;
         min-height: 0 !important;
     }
 
     .video-hero .hero-background-video {
         position: absolute !important;
-        top: 50% !important;
-        left: 50% !important;
+     
         width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16/9;
+        height: 100% !important;
+      
         display: block;
         object-fit: contain !important;
-        transform: translate(-50%, -50%) !important;
+       
     }
 
 .video-hero .hero-content {
@@ -524,13 +523,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 15px;
+    padding: 0 0px;
 }
 
     .video-hero .intro-text {
         width: 100%;
         height: auto;
-        min-height: 0;
+        min-height: auto;
         margin: 0;
     }
 
